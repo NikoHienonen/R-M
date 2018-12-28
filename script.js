@@ -7,11 +7,18 @@ function readyUp(){
         this.element = element;                   //assign the img-element to the function    
 
         //fetch the content of the url and send the acquired J-son object to the assigned function
-        this.fetchTheUrl = function() {
+        this.fetchTheUrl = async() => {
             this.url = this.url+this.id
-            fetch(this.url)
-            .then((result) => result.json())
-            .then(this.done)
+
+            // Create a GET request for the character with url https://rickandmortyapi.com/api/character/randomIdWhichWasGenerated
+            // Instead of continuing to the next line, wait for the request to finish (await).
+            const response = await fetch(this.url);
+
+            // Get the JSON of the response, wait for the request to complete and pass it to "result" variable.
+            const result = await response.json();
+
+            // Call the done-function and give result as a parameter to it.
+            this.done(result);
         }
             
 
@@ -80,13 +87,12 @@ function readyUp(){
     imgs.forEach(element => {
         let id = getID();
         ids.push(id);
-        console.log(id);
         let f = new MyFetch('https://rickandmortyapi.com/api/character/', id, element);
         f.fetchTheUrl();
     });
     setTimeout(()=>{
         setRightAnswer(imgs);
-        askTheQuestion();}, 1100)
+        askTheQuestion()}, 1100)
     
 }
 

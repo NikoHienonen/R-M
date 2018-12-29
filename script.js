@@ -57,8 +57,9 @@ function readyUp(){
     }
     function askTheQuestion(){
         let correct = document.querySelector('.correctAnswer').getAttribute("name");
-        let question = document.querySelector('.question');
-        question.innerHTML = "Which of the above is "+correct+"?";
+        let 
+        let question = document.querySelector('.word');
+        question.innerHTML = correct+"?";
     }
 
     function checkID(id){

@@ -57,7 +57,6 @@ function readyUp(){
     }
     function askTheQuestion(){
         let correct = document.querySelector('.correctAnswer').getAttribute("name");
-        let 
         let question = document.querySelector('.word');
         question.innerHTML = correct+"?";
     }

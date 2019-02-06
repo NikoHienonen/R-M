@@ -1,19 +1,22 @@
 body {
   background: #000000;
   text-align: center;
-  max-width: 635px;
+  max-width: 400px;
   margin: 2rem auto; }
+
+.container {
+  max-width: 600px; }
 
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 6rem;
-  line-height: 6rem;
+  font-size: 3rem;
+  line-height: 3rem;
   margin-bottom: 1rem; }
 
 h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-top: 1rem;
   margin-bottom: 0; }
 
@@ -28,12 +31,12 @@ a {
   -moz-appearance: button;
   appearance: button;
   background: white;
-  font-size: 3rem;
-  width: 20rem;
+  font-size: 1.5rem;
+  width: 10rem;
   text-decoration: none;
   color: initial;
-  padding: 1rem;
-  margin-top: 2rem; }
+  padding: 0.5rem;
+  margin-top: 1rem; }
 
 .imgContainer {
   display: grid;
@@ -46,13 +49,13 @@ a {
 .choice {
   transition: all 0.5s ease-out;
   width: 92%;
-  padding: 1rem;
+  padding: 0.5rem;
   background: red; }
 
 .gm {
   transition: all 0.5s ease-out;
   width: 92%;
-  padding: 1rem;
+  padding: 0.5rem;
   background: lime; }
 
 .menu {
